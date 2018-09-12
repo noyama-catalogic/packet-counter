@@ -11,7 +11,7 @@ A Pakcet Counter for tcpdump
 * UNIX environment
 
 ### Spreadsheet application (optional)
-The script returns the packet analysis result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that has easy-to-use filters such as
+The script returns the packet analysis result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that supports easy-to-use filters such as
 * Microsoft Excel
 * LibreOffice
 
