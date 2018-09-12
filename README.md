@@ -3,11 +3,12 @@ A Pakcet Counter for tcpdump
 
 ## System Requirement
 ### Target Device
-* tcpdump (or WinDump.exe for Windows)
+* tcpdump
+  * You may also use WinDump.exe for Windows. See https://www.winpcap.org/windump/ .
 
 ### Device that runs Packet Counter
 * UNIX environment
-** e.g. Linux, FreeBSD, Windows (MSYS2, Cygwin), Windows Subsystems for Linux (WSL, aka. _Bash for Windows 10_)
+  * e.g. Linux, Windows (MSYS2, Cygwin), Windows Subsystems for Linux (WSL, aka. _Bash for Windows 10_)
 * Bash (v4+)
 * AWK
 
@@ -45,7 +46,7 @@ bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:05
 
 
 ## Q&A
-### Tips
+### 1. Tips
 **Question 1.** I captured packets over midnight: from 23:00 through 01:00 on the next day.  But this script doesn't support a log file with multiple dates.  What should I do?
 
 _Ans._ Split your log files using text processing tools as needed.  For example, if you have a UNIX environment with you, run
@@ -64,6 +65,10 @@ $ tail +n 4222 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-02_0000_
 ```
 Now you can use `packetCounetr.sh` for each file.
 
+### 2. Windows
+**Question 2.1.** Does packet-counter support Windows?
+
+_Ans._ _Yes!_ Use WinDump.exe to capture packets on your Windows comptuer. The packet-count scripts also runs on Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
 
 ## Questions & Comments
 Please contact the primary author Nathan Oyama <nathan.oyama[[at]]berkeley.edu>.
