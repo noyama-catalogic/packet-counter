@@ -10,8 +10,8 @@ A Pakcet Counter for tcpdump
 * AWK
 * UNIX environment
 
-### CSV viewer (optional)
-The script returns the packet analysis result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that supports filters, such as
+### Spreadsheet application (optional)
+The script returns the packet analysis result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that has easy-to-use filters such as
 * Microsoft Excel
 * LibreOffice
 
@@ -31,8 +31,8 @@ $ bash ./packetCounter.sh <file> <IP> <start time> <end time>
 $ tcpdump -i any -nnq > ./$(hostname)_$(env TZ=UTC date +%F_%H%M)UTC.dat
 ```
 * `<IP>`: The IP address of the target device. E.g. 10.20.30.40.
-* `<start time>`: The start time you want to retrieve. The output will start from the first records with the timestamps which is the same or larger than the given start time. Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 09:50
-* `<end time>`: The end time you want to retrieve. The output will end at one line before the first record whose timestamp exceeds the given end time. The Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 12:34:56
+* `<start time>`: The start time you want to retrieve. The output will start from the first records with the timestamps which is the same or larger than the given start time. Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 09:50.
+* `<end time>`: The end time you want to retrieve. The output will end at one line before the first record whose timestamp is one second ahead of the given end time. The Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 12:34:56.
 
 ### Example:
 Consider you logged into your computer 10.20.30.40, ran the tcpdump command and got the packet record file _target_pc_2018-09-07_0556UTC.dat_.  If you want to retrieve the packet count record with the timestamps between 01:50 and 02:05, run the following command:
