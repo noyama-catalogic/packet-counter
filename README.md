@@ -6,12 +6,13 @@ A Pakcet Counter for tcpdump
 * tcpdump (or WinDump.exe for Windows)
 
 ### Device that runs Packet Counter
+* UNIX environment
+** e.g. Linux, FreeBSD, Windows (MSYS2, Cygwin), Windows Subsystems for Linux (WSL, aka. _Bash for Windows 10_)
 * Bash (v4+)
 * AWK
-* UNIX environment
 
 ### Spreadsheet application (optional)
-The script returns the packet analysis result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that supports easy-to-use filters such as
+The script generates packet count result in two CSV files: (1) incoming packets and (2) outgoing packets. You can use any CSV viewers, but it is advised to use a spreadsheet application that supports easy-to-use filters such as
 * Microsoft Excel
 * LibreOffice
 
