@@ -18,7 +18,8 @@ The script returns the packet analysis result in two CSV files: (1) incoming pac
 ## Usage
 Run the following script on the target device:
 ```bash
-$ tcpdump -i <interface> -nnq > ./<file>
+$ tcpdump     -i <interface> -nnq > ./<file>   # for UNIX
+> WinDump.exe -i <interface> -nnq > ./<file>   # for Windows
 ```
 To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>. In Windows, use `windump.exe -D` to identify the interface #.
 
