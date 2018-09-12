@@ -61,8 +61,8 @@ $
 The command above returned the line in this log file that contains "00:" at the beginning, but only the 1st occurence (`-m 1`), and the output includes the line number (`-n`).  From this example output, you can see _line 4222_ is the first line with the timestamp of 00:. Split the file using `head` and `tail`:
 
 ```bash
-$ head -n 4221 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-01_2300_2359.dat
-$ tail +n 4222 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-02_0000_0100.dat
+$ head -4221 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-01_2300_2359.dat
+$ tail +4222 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-02_0000_0100.dat
 ```
 Now you can use `packetCounetr.sh` for each file.
 
