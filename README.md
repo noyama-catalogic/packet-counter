@@ -28,14 +28,18 @@ $ bash ./packetCounter.sh <file> <IP> <start time> <end time>
 ```
 * `<file>`: A packet record file you get by running the following command on the target device:
 ```bash
-$ tcpdump -i any -nnq > ./$(hostname)_$(env TZ=UTC date +%F_%H%M)UTC.dat
+$ tcpdump -i any -nnq > ./packetRecords.dat
 ```
 * `<IP>`: The IP address of the target device. E.g. 10.20.30.40.
 * `<start time>`: The start time you want to retrieve. The output will start from the first records with the timestamps which is the same or larger than the given start time. Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 09:50.
 * `<end time>`: The end time you want to retrieve. The output will end at one line before the first record whose timestamp is one second ahead of the given end time. The Use the <HH>, <HH:mm> or <HH:mm:ss> format. E.g. 12:34:56.
 
 ### Example:
-Consider you logged into your computer 10.20.30.40, ran the tcpdump command and got the packet record file _target_pc_2018-09-07_0556UTC.dat_.  If you want to retrieve the packet count record with the timestamps between 01:50 and 02:05, run the following command:
+Consider you logged into your computer 10.20.30.40, ran the tcpdump command below and get the packet record file:
+```bash
+$ tcpdump -i any -nnq > ./$(hostname)_$(env TZ=UTC date +%F_%H%M)UTC.dat
+```
+If you want to retrieve the packet count record with the timestamps between 01:50 and 02:05, run the following command:
 ```bash
 bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:05
 ```
