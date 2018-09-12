@@ -1,9 +1,9 @@
-# packet-counter
+# packet-counter (pre-alpha)
 A Pakcet Counter for tcpdump
 
 ## System Requirement
 ### Target Device
-* tcpdump
+* tcpdump (or WinDump.exe for Windows)
 
 ### Device that runs Packet Counter
 * Bash (v4+)
@@ -18,9 +18,9 @@ The script returns the packet analysis result in two CSV files: (1) incoming pac
 ## Usage
 Run the following script on the target device:
 ```bash
-$ tcpdump -i any -nnq > ./myPacketRecords.dat
+$ tcpdump -i <interface> -nnq > ./<file>
 ```
-To end capturing packets, press [Ctrl] + [c].
+To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>. In Windows, use `windump.exe -D` to identify the interface #.
 
 Run the following command on the dcevice you want to capture packets.
 ```bash
