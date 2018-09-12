@@ -72,6 +72,6 @@ Now you can use `packetCounetr.sh` for each file.
 _Ans._ _Yes!_ Use WinDump.exe to capture packets on your Windows comptuer. The packet-count scripts also runs on Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
 
 ## Questions & Comments
-Please contact the primary author Nathan Oyama <nathan.oyama[[at]]berkeley.edu>.
+Please contact the primary developer Nathan Oyama <nathan.oyama[[at]]berkeley.edu>.
 
 _Last modified: September 12, 2018 by Nahtan Oyama_
