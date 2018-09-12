@@ -1,5 +1,5 @@
-# packet-counter (pre-alpha)
-A Pakcet Counter for tcpdump
+# Packet Counter (pre-alpha)
+Count number of packets for every second, every source/destination IP address within a given timeragne.
 
 ## System Requirement
 ### Target Device
@@ -7,6 +7,7 @@ A Pakcet Counter for tcpdump
   * You may also use WinDump.exe for Windows. See https://www.winpcap.org/windump/ .
 
 ### Device that runs Packet Counter
+Packet Counter does not need to be used on the target device. For example, you may capture packets on RaspberryPi, move your packet record file into your PC and run Packet Counter to count packets.
 * UNIX environment
   * e.g. Linux, Windows (MSYS2, Cygwin), Windows Subsystems for Linux (WSL, aka. _Bash for Windows 10_)
 * Bash (v4+)
