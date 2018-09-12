@@ -2,14 +2,14 @@
 # Nathan Oyama - Mon Sep 10 07:28:34 DST 2018
 # 
 # Usage: 
-# bash ./timerange_filter.sh <source_file> <start_time> <end_time>
+# bash ./timerangeFilter.sh <source_file> <start_time> <end_time>
 # 
 # where each line of <source_file> MUST starts with a timestmap
 # in HH:mm:ss and <start_time> and <end_time> are in either
 # H:mm:ss or HH:mm:ss.
 # 
 # Example:
-# bash ./timerange_filter.sh tcpdumpLog.dat 21:26 21:28 
+# bash ./timerangeFilter.sh tcpdumpLog.dat 21:26 21:28 
 # 
 # Restriction:
 # The target log must have a timestamp (HH:mm:ss) at the beginning of 
