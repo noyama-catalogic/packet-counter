@@ -18,7 +18,7 @@ The script returns the packet analysis result in two CSV files: (1) incoming pac
 ## Usage
 Run the following script on the target device:
 ```bash
-$ tcpdump -i any -nnq > ./$(hostname)_$(env TZ=UTC date +%F_%H%M)UTC.dat
+$ tcpdump -i any -nnq > ./myPacketRecords.dat
 ```
 To end capturing packets, press [Ctrl] + [c].
 
