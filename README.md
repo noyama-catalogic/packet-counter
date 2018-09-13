@@ -45,7 +45,7 @@ $ bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:
 ```
 
 
-## Tips
+## Questions and Answers
 ### 1. About General Usage
 **Question 1.** I captured packets over midnight: from 23:00 through 01:00 on the next day.  But this script doesn't support a log file with multiple dates.  What should I do?
 
@@ -71,7 +71,7 @@ Now you can use `packetCounetr.sh` for each file.
 _Ans._ _Yes!_ You can capture packets on Windows PC and run _Packet Counter_ on Windows PC too.
 
 
-** Question 2.2. ** How can I capture packets from Windows?
+**Question 2.2.** How can I capture packets from Windows?
 
 _Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows comptuer in a similar fashion, i.e., run the following command:
 
@@ -80,7 +80,7 @@ WinDump.exe -i <interface> -nnq > ./<file>   # for Windows
 ```
 For more information, visit https://www.winpcap.org/windump/ .
 
-** Question 2.3. ** How can I run _Packet Counter_ on Windows?
+**Question 2.3.** How can I run _Packet Counter_ on Windows?
 
 _Ans._ Use UNIX environment on Windows: Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
 
