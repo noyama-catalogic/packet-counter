@@ -4,7 +4,7 @@ Count packets for each port, for each source/destination IP address every second
 ## System Requirement
 ### Target Device
 * tcpdump
-  * You may also use WinDump.exe for Windows. See https://www.winpcap.org/windump/ .
+  * For Windows, use WinDump.exe (https://www.winpcap.org/windump/) instead.
 
 ### Device that runs Packet Counter
 Packet Counter does not need to be used on a target device. For example, you may capture packets on RaspberryPi, move your packet record files into your PC and run Packet Counter to count packets.
