@@ -47,7 +47,7 @@ $ bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:
 
 
 ## Tips
-### 1. General Usage
+### 1. About General Usage
 **Question 1.** I captured packets over midnight: from 23:00 through 01:00 on the next day.  But this script doesn't support a log file with multiple dates.  What should I do?
 
 _Ans._ Split your log files using text processing tools as needed.  For example, if you have a UNIX environment with you, run
@@ -66,7 +66,7 @@ $ tail +4222 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-02_0000_01
 ```
 Now you can use `packetCounetr.sh` for each file.
 
-### 2. Windows
+### 2. About Windows Support
 **Question 2.1.** Does Packet Counter support Windows?
 
 _Ans._ _Yes!_ Use WinDump.exe to capture packets on your Windows comptuer. The packet-count scripts also runs on Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
