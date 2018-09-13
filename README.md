@@ -42,7 +42,7 @@ $ tcpdump -i any -nnq > ./$(hostname)_$(env TZ=UTC date +%F_%H%M)UTC.dat
 ```
 If you want to retrieve the packet count record with the timestamps between 01:50 and 02:05, run the following command:
 ```bash
-bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:05
+$ bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:05
 ```
 
 
