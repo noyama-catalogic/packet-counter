@@ -23,7 +23,7 @@ Run the following script on the target device:
 ```bash
 $ tcpdump     -i <interface> -nnq > ./<file>
 ```
-To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>. In Windows, use `windump.exe -D` to identify the interface #.
+To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>.  For Windows users, see Questoin 2.
 
 Run the following command on the dcevice you want to capture packets.
 ```bash
@@ -73,12 +73,13 @@ _Ans._ _Yes!_ You can capture packets on Windows PC and run _Packet Counter_ on 
 
 **Question 2.2.** How can I capture packets from Windows?
 
-_Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows comptuer in a similar fashion, i.e., run the following command:
+_Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows system in the similar fashion, i.e.,
 
 ```bash
-WinDump.exe -i <interface> -nnq > ./<file>   # for Windows
+WinDump.exe -D                              # Identify the interface ID
+WinDump.exe -i <interface> -nnq > ./<file>
 ```
-For more information, visit https://www.winpcap.org/windump/ .
+Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for <interface>. For more information on WinDump.exe, see https://www.winpcap.org/windump/ .
 
 **Question 2.3.** How can I run _Packet Counter_ on Windows?
 
