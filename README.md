@@ -67,7 +67,7 @@ $ tail +4222 ./MY-DEVICE_2019-01-01_2300UTC.dat > ./MY-DEVICE_2019-01-02_0000_01
 Now you can use `packetCounetr.sh` for each file.
 
 ### 2. Windows
-**Question 2.1.** Does packet-counter support Windows?
+**Question 2.1.** Does Packet Counter support Windows?
 
 _Ans._ _Yes!_ Use WinDump.exe to capture packets on your Windows comptuer. The packet-count scripts also runs on Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
 
