@@ -7,7 +7,7 @@ Count packets for each port, for each source/destination IP address every second
   * You may also use WinDump.exe for Windows. See https://www.winpcap.org/windump/ .
 
 ### Device that runs Packet Counter
-Packet Counter does not need to be used on the target device. For example, you may capture packets on RaspberryPi, move your packet record file into your PC and run Packet Counter to count packets.
+Packet Counter does not need to be used on a target device. For example, you may capture packets on RaspberryPi, move your packet record files into your PC and run Packet Counter to count packets.
 * UNIX environment
   * e.g. Linux, Windows (MSYS2, Cygwin), Windows Subsystems for Linux (WSL, aka. _Bash for Windows 10_)
 * Bash (v4+)
