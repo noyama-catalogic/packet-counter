@@ -3,8 +3,8 @@ Count packets for each port, for each source/destination IP address every second
 
 ## System Requirement
 ### Target Device
-* tcpdump
-  * For Windows, use WinDump.exe (https://www.winpcap.org/windump/) instead.
+* tcpdump (Linux)
+* WinDump (Windows)
 
 ### Device that runs Packet Counter
 Packet Counter does not need to be used on a target device. For example, you may capture packets on RaspberryPi, move your packet record files into your PC and run Packet Counter to count packets.
@@ -21,8 +21,7 @@ The script generates packet count result in two CSV files: (1) incoming packets 
 ## Usage
 Run the following script on the target device:
 ```bash
-$ tcpdump     -i <interface> -nnq > ./<file>   # for UNIX
-> WinDump.exe -i <interface> -nnq > ./<file>   # for Windows
+$ tcpdump     -i <interface> -nnq > ./<file>
 ```
 To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>. In Windows, use `windump.exe -D` to identify the interface #.
 
@@ -69,7 +68,22 @@ Now you can use `packetCounetr.sh` for each file.
 ### 2. About Windows Support
 **Question 2.1.** Does Packet Counter support Windows?
 
-_Ans._ _Yes!_ Use WinDump.exe to capture packets on your Windows comptuer. The packet-count scripts also runs on Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
+_Ans._ _Yes!_ You can capture packets on Windows PC and run _Packet Counter_ on Windows PC too.
+
+
+** Question 2.2. ** How can I capture packets from Windows?
+
+_Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows comptuer in a similar fashion, i.e., run the following command:
+
+```bash
+WinDump.exe -i <interface> -nnq > ./<file>   # for Windows
+```
+For more information, visit https://www.winpcap.org/windump/ .
+
+** Question 2.3. ** How can I run _Packet Counter_ on Windows?
+
+_Ans._ Use UNIX environment on Windows: Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
+
 
 ## Questions & Comments
 Please contact the primary developer Nathan Oyama <nathan.oyama[[at]]berkeley.edu>.
