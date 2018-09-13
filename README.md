@@ -46,8 +46,8 @@ $ bash ./packetCounter.sh target_pc_2018-09-07_0556UTC.dat 10.20.30.40 01:50 02:
 ```
 
 
-## Q&A
-### 1. Tips
+## Tips
+### 1. General Usage
 **Question 1.** I captured packets over midnight: from 23:00 through 01:00 on the next day.  But this script doesn't support a log file with multiple dates.  What should I do?
 
 _Ans._ Split your log files using text processing tools as needed.  For example, if you have a UNIX environment with you, run
