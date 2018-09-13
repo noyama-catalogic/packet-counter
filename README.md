@@ -1,5 +1,5 @@
 # Packet Counter (pre-alpha)
-Count number of packets for every second, every source/destination IP address within a given timeragne.
+Count packets for each port, for each source/destination IP address every second, within a given timeragne.
 
 ## System Requirement
 ### Target Device
