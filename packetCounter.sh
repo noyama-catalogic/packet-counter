@@ -31,7 +31,7 @@ fi
 
 FILENAME="$(echo $FILE | sed "s/.dat$//")_${START_TIME_D}_${END_TIME_D}"
 
-bash ./timerange_filter.sh $FILE $START_TIME $END_TIME > ./${FILE}_filtered.tmp
+bash ./timerangeFilter.sh $FILE $START_TIME $END_TIME > ./${FILE}_filtered.tmp
 
 csv_formatter () {
     sourceFile=$1
@@ -52,14 +52,14 @@ csv_formatter () {
 }
 
 # Incoming packets received at $IP
-echo "# of packets,Time,Source,Source Port,>,Destination,Destionation Port,\
+echo "# of packets,Time,Source,Source Port,>,Destination,Destination Port,\
     Port" > ./${FILENAME}_incoming.csv
 
 grep " IP .* > $IP.*" ${FILE}_filtered.tmp > ./${FILE}_filtered_incoming.tmp
 csv_formatter ./${FILE}_filtered_incoming.tmp >> ./${FILENAME}_incoming.csv
 
 # Outgoing packets submitted form $IP
-echo "# of packets,Time,Source,Source Port,>,Destination,Destionation Port,\
+echo "# of packets,Time,Source,Source Port,>,Destination,Destination Port,\
     Port" > ./${FILENAME}_outgoing.csv
 
 grep " IP $IP.* > .*" ${FILE}_filtered.tmp > ./${FILE}_filtered_outgoing.tmp
