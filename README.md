@@ -83,7 +83,7 @@ Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for `<interface>`. F
 
 **Question 2.3.** How can I run _Packet Counter_ on Windows?
 
-_Ans._ Use UNIX environment on Windows: Cygwin, MSYS2 and Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
+_Ans._ Use a UNIX environment on Windows: Cygwin, MSYS2 or Windows Subsystem for Linux (WSL, aka. Bash for Windows 10).
 
 
 ## Questions & Comments
