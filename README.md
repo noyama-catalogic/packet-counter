@@ -21,7 +21,7 @@ The script generates packet count result in two CSV files: (1) incoming packets 
 ## Usage
 Run the following script on the target device:
 ```bash
-$ tcpdump     -i <interface> -nnq > ./<file>
+$ tcpdump -i <interface> -nnq > ./<file>
 ```
 To end capturing packets, press [Ctrl] + [c].  In UNIX environment, you may use `any` for <IP>.  For Windows users, see Questoin 2.
 
@@ -76,10 +76,10 @@ _Ans._ _Yes!_ You can capture packets on Windows PC and run _Packet Counter_ on 
 _Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows system in the similar fashion, i.e.,
 
 ```bash
-WinDump.exe -D                              # Identify the interface ID
+WinDump.exe -D                              # Identify an interface ID
 WinDump.exe -i <interface> -nnq > ./<file>
 ```
-Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for <interface>. For more information on WinDump.exe, see https://www.winpcap.org/windump/ .
+Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for `<interface>`. For more information on WinDump.exe, see https://www.winpcap.org/windump/ .
 
 **Question 2.3.** How can I run _Packet Counter_ on Windows?
 
