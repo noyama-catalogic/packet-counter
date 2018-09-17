@@ -83,7 +83,8 @@ If you are using PowerShell, you may use the following command which puts the us
 
 ```powershell
 WinDump.exe -i <interface> -nnq `
-> ./$([System.Environment]::UserDomainName) + "_" + $(Get-Date).ToUniversalTime().ToString("yyyy-MM-dd_hhmm") + "UTC"
+> ./$([System.Environment]::UserDomainName) + "_" `
++ $(Get-Date).ToUniversalTime().ToString("yyyy-MM-dd_hhmm") + "UTC"
 ```
 
 Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for `<interface>`. For more information on WinDump.exe, see https://www.winpcap.org/windump/ .
