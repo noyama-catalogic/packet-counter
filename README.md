@@ -79,13 +79,6 @@ _Ans._ Install pcap.exe and run WinDump.exe to capture packets on your Windows s
 WinDump.exe -D                              # Identify an interface ID
 WinDump.exe -i <interface> -nnq > ./<file>
 ```
-If you are using PowerShell, you may use the following command which puts the user domain name and the timestamp into the output filename:
-
-```powershell
-WinDump.exe -i <interface> -nnq `
-> ./$([System.Environment]::UserDomainName) + "_" `
-+ $(Get-Date).ToUniversalTime().ToString("yyyy-MM-dd_hhmm") + "UTC"
-```
 
 Unlike tcpdump for UNIX, WinDump.exe does not support `ANY` for `<interface>`. For more information on WinDump.exe, see https://www.winpcap.org/windump/ .
 
